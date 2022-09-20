@@ -199,16 +199,7 @@
           else{
             this.quizCompleted= true
             
-            const auth = getAuth();
-          const project = {
-              user: auth.currentUser.email,
-              remarks: this.result,
-              scores: this.score,
-              timestamp: new Date(),
-            }
-            db.collection('projects').add(project).then(() => {
-              console.log("Added")
-            })
+            
             if(this.quizCompleted=true){
             this.passingScore= (0.5*this.questions.length);
             if(this.score>=this.passingScore){
@@ -219,6 +210,16 @@
               this.result= "Failed"              
             }
           }
+          const auth = getAuth();
+          const project = {
+              User: auth.currentUser.email,
+              Remarks: this.result,
+              Scores: this.score,
+              Timestamp: new Date(),
+            }
+            db.collection('projects').add(project).then(() => {
+              console.log("Added")
+            })
           }
             
         }

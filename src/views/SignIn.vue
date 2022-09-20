@@ -50,8 +50,10 @@ x-small router-link to="/register">Learn More</v-btn>
 <v-container fluid>
   
   <div id="quiz-container">
-   <div style="text-align: center;">
-   <i class="fa-solid fa-user fa-5x"></i>
+   <div style="text-align: center">
+    
+    <center><v-img class="bgicon" src="https://cdn.dribbble.com/users/2726709/screenshots/6478602/1.gif"/></center>
+   
 </div>
   <center><h1>Sign In</h1></center>
   <p class="mx-auto my-1"></p>
@@ -202,7 +204,9 @@ const signInWithGoogle = () => {
  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4)
 }
 
-
+.bgicon {
+  max-width: 10rem;
+}
 
 
 </style>

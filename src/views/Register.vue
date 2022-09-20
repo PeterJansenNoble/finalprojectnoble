@@ -8,12 +8,14 @@
    elevation="9"
  >
  <v-card-title class="caltitle">Register</v-card-title>
+ 
  <v-container fluid>
+ <center> <v-img class="icon" src="https://cdn.dribbble.com/users/2446970/screenshots/5883361/media/c6adf54fc02fea4ac9e2e003bbf5370d.gif"></v-img></center> 
    
    <div id="quiz-container">
-       <div style="text-align: center;">
-           <i class="fa-solid fa-user-plus fa-5x"></i>
-</div>
+      
+           
+
    <center><h1>Create an Account</h1></center>
    <p class="mx-auto my-1"></p>
    <v-text-field
@@ -53,12 +55,12 @@
 <p class="mx-auto my-12" color="#34495E">If you have already an account sign in here.</p>
 </center>
 <p class="mx-auto my-1">
- <v-btn block  color="#41B883"
+ <v-btn class="signinbtn" block  color="#41B883"
  elevation="1"
  small
  x-large
  x-small
- router-link to="/"><div class="resultbtn">Sign-In</div></v-btn>
+ router-link to="/"><div class="resultbtn" >Sign-In</div></v-btn>
 </p>
 
    
@@ -116,5 +118,9 @@ const signInWithGoogle = () => {
 .h1{
    align-content: center;
 }
+.icon {
+   width: 17rem;
+}
+
 
 </style>

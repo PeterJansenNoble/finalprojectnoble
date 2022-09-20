@@ -47,8 +47,10 @@
       
       </v-toolbar>
       
-     <v-navigation-drawer color="#34495E" v-model="drawer" >
+     <v-navigation-drawer color="#34495E" v-model="drawer">
+      
      <aside :class="`${is_expanded ? 'is-expanded' : ''}`">
+      
       <center>
 		<div center class="logo">
 			<img :src="logoURL" alt="Vue" /> 
@@ -111,8 +113,7 @@ import router from '../router';
            { title: 'About Vuetify', icon: 'mdi-receipt', path: '/aboutVuetify'},
           { title: 'About Me', icon: 'mdi-account', path: '/aboutMe'},
           { title: 'About Apps', icon: 'mdi-apps', path: '/aboutProject'},
-          { title: 'Register', icon: 'mdi-account-circle', path: '/register'},
-          { title: 'Sign In', icon: 'mdi-account-box', path: '/'},
+         
           
           
           
