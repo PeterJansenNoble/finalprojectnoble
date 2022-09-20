@@ -7,7 +7,8 @@
   <main>
    
     <br>
-    <br><br><br><br><br><br>
+    
+    <center> <v-img class="icon" src="https://thumbs.gfycat.com/PinkPiercingBull-size_restricted.gif"></v-img></center> 
      <h1 class="vuetitle">Research About Vuetify</h1>
      <header class='masthead'>
  
