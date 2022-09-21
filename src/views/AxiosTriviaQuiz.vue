@@ -217,7 +217,7 @@
               Scores: this.score,
               Timestamp: new Date(),
             }
-            db.collection('projects').add(project).then(() => {
+            db.collection('quizscores').add(project).then(() => {
               console.log("Added")
             })
           }
