@@ -59,6 +59,20 @@
                           <h1 id="quizpassed">{{result}}</h1>
                           <p id="quizpassed">{{score}}/{{questions.length}}</p>
                         </v-card-text>
+                        <center>
+                          <p>
+                          Would you like to play again?
+                        </p>
+                          <v-btn
+                          id="play-again"
+                          class="button-footer"
+                          color="#34495E"
+                          @click="reload"
+                          ><div class="playagain"> Play Again? </div>
+                        </v-btn> 
+                      </center>
+
+   
                         
                     </section>
                   </section>
@@ -74,7 +88,7 @@
     <script>
       
   import db from '@/fb'
-  import { getAuth } from "firebase/auth";
+  import { getAuth, reload } from "firebase/auth";
   export default {
     name: "Quiz",
     // data() function stores state variables
@@ -157,7 +171,8 @@
   
           allButtons[i].setAttribute("disabled", "");
         }
-  
+        
+        
         /* Invoke checkAnswer to check Answer */
         this.checkAnswer(event, index);
       },
@@ -193,6 +208,7 @@
             });
           }
           
+          
           if(this.questionCurrentNumber<this.questions.length){
             this.questionCurrentNumber++;
           }
@@ -203,13 +219,15 @@
             if(this.quizCompleted=true){
             this.passingScore= (0.5*this.questions.length);
             if(this.score>=this.passingScore){
-              this.result= "Passed"
+              this.result= "You've Passed"
               this.pass=true
             }
             else{
-              this.result= "Failed"              
+              this.result= "You've Failed"              
             }
+            
           }
+          
           const auth = getAuth();
           const project = {
               User: auth.currentUser.email,
@@ -225,6 +243,10 @@
         }
         
       },
+      //reload page
+      reload(){
+            window.location.reload();
+          }
     },
     
     // Code inside mounted() runs after the Component has mounted
@@ -237,6 +259,17 @@
   </script>
     
     <style scoped>
+
+.button-footer {
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    210deg,
+    #41B883,
+    #41B883
+  );
+  border-radius: 7px;
+  border: none;
+}
 
 .divider {
     margin: 0.5rem 0;
@@ -444,5 +477,9 @@ form {
 }
 h1 {
   color:rgb(0, 0, 0);
+}
+.playagain {
+  color: white;
+padding-bottom: 3rem;
 }
   </style>
