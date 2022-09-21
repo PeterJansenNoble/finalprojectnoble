@@ -106,7 +106,7 @@
       async fetchQuestions() {
         this.loading = true;
         let response = await fetch(
-          "https://opentdb.com/api.php?amount=10&category=32&difficulty=easy&type=multiple"
+          "https://opentdb.com/api.php?amount=10&category=21&difficulty=easy"
         );
         let jsonResponse = await response.json();
         let index = 0; // index is used to identify single answer
